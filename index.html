@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Grid</title>
+	<link rel="stylesheet" href="default.css">
+	<style>
+		html{
+			overflow-x: hidden;
+		}
+		.grid-container {
+			display: grid;
+			height: 100vh;
+			grid-template-columns: 1fr 3fr 1fr;
+			gap: 1rem;
+		}
+
+		.card-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			height: 80vh;
+			padding: 35px;
+		}
+
+		.header-container {
+			display: flex;
+		}
+
+		.main {
+			margin-left: 200px;
+			margin-right: 200px;
+		}
+
+		.box {
+			width: 45px;
+			height: 45px;
+			margin: 10px 10px;
+			border-radius: 70%;
+			overflow: hidden;
+		}
+
+		.profile-img {
+			width: 35px;
+			height: 35px;
+			margin: 10px 10px;
+			margin-left: 0px;
+			border-radius: 70%;
+			overflow: hidden;
+		}
+
+
+		.profile {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.card-profile {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 25px;
+			align-items: center;
+			object-fit: cover;
+		}
+
+		.name {
+			font-size: 15px;
+		}
+
+		.time {
+			font-size: 15px;
+		}
+
+		.follow {
+			font-size: 17px;
+			color: blue;
+			text-decoration: none;
+		}
+
+		.follow:hover {
+			color: black;
+		}
+		.card-img{
+			width: 80%;
+			height: 100%;
+		}
+		.memu{
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		.memu-item-link{
+			color: black;
+			font-size: 24px;
+			padding: 15px;
+			width: 100%;
+		}
+		.memu-item-link-icon{
+			color: black;
+			font-size: 18px;
+			padding: 15px;
+			width: 100%;
+		}
+		.memu-item-link:hover{
+			color: white;
+			background-color: black;
+		}
+		.memu-item:first-child{
+			margin-bottom: auto;
+		}
+		.memu-item:last-child{
+			margin-top: auto;
+		}
+		@media (max-width : 680px) {
+			.side-a,.side-b{
+				display: none;
+			}
+			.main{
+				margin: 0;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="grid-container">
+		<div class="side-a">
+			<ul class="memu">
+				<li class="memu-item"><button class="memu-item-link-icon" href="#"><h1>InstaGram</h1></button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">홈</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">검색</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">탐색 팁</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">릴스</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">메시지</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">알림</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">만들기</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">프로필</button></li>
+				<li class="memu-item"><button class="memu-item-link" href="#">더보기</button></li>
+			</ul>
+		</div>
+		<div class="main">
+			<ul class="header-container">
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+				<li class="box"><img class="profile"
+						src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"></li>
+			</ul>
+			<div class="card-container">
+				<div class="card-profile">
+					<div class="profile-img">
+						<img class="profile"
+							src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg">
+					</div>
+					<span class="name">안녕</span>·<span class="time">1일</span>·<a class="follow" href="#">팔로잉</a>
+					<div class="card-img">
+						<img src="https://happycgi.com/program/mallimg/2015/10/26/1445846118-997.jpg" alt="">
+					</div>
+				</div>
+				<div class="card-profile">
+					<div class="profile-img">
+						<img class="profile"
+							src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg">
+					</div>
+					<span class="name">안녕</span>·<span class="time">1일</span>·<a class="follow" href="#">팔로잉</a>
+					<div class="card-img">
+						<img src="https://happycgi.com/program/mallimg/2015/10/26/1445846118-997.jpg" alt="">
+					</div>
+				</div>
+				<div class="card-profile">
+					<div class="profile-img">
+						<img class="profile"
+							src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg">
+					</div>
+					<span class="name">안녕</span>·<span class="time">1일</span>·<a class="follow" href="#">팔로잉</a>
+					<div class="card-img">
+						<img src="https://happycgi.com/program/mallimg/2015/10/26/1445846118-997.jpg" alt="">
+					</div>
+				</div>
+				<div class="card-profile">
+					<div class="profile-img">
+						<img class="profile"
+							src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg">
+					</div>
+					<span class="name">안녕</span>·<span class="time">1일</span>·<a class="follow" href="#">팔로잉</a>
+					<div class="card-img">
+						<img src="https://happycgi.com/program/mallimg/2015/10/26/1445846118-997.jpg" alt="">
+					</div>
+				</div>
+				<div class="card-profile">
+					<div class="profile-img">
+						<img class="profile"
+							src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg">
+					</div>
+					<span class="name">안녕</span>·<span class="time">1일</span>·<a class="follow" href="#">팔로잉</a>
+					<div class="card-img">
+						<img src="https://happycgi.com/program/mallimg/2015/10/26/1445846118-997.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="side-b">side-b</div>
+	</div>
+</body>
+
+</html>
